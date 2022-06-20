@@ -21,15 +21,15 @@ async def on_ready():
 @bot.event
 async def on_command(ctx: Context):
     print(f"""
-    {getenv("PREFIX")}{ctx.command} - [{datetime.now().strftime("%d/%m/%y %H:%M:%S")}] {ctx.author} in {ctx.channel}|{ctx.guild}
+    {getenv("PREFIX")}{ctx.command} - by {ctx.author} in {ctx.channel}|{ctx.guild} at {datetime.now().strftime("%d/%m/%y %H:%M:%S")}
     """)
     return
 
 
-@bot.event
-async def on_command_error(ctx: Context, err: CommandError):
-    await ctx.reply(err.args[0])
-    return
+# @bot.event
+# async def on_command_error(ctx: Context, err: CommandError):
+#    await ctx.reply(err.args[0])
+#    return
 
 bot.add_cog(StreamingCommands(bot))
 bot.add_cog(AssetsCommands(bot))

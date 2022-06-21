@@ -1,5 +1,5 @@
 from discord.ext.commands import Context, Bot, Cog, command
-from utils.yt_audio import play_audio_from_url, stop_audio
+from utils.play_audio import play_audio_from_url, stop_audio
 
 
 class StreamingCommands(Cog):
@@ -9,7 +9,7 @@ class StreamingCommands(Cog):
 
     @command(name="play", help="Toca uma música a partir de uma url do youtube")
     async def play(self, ctx: Context):
-        await play_audio_from_url(ctx, self.bot, "https://www.youtube.com/watch?v=5sMKX22BHeE")
+        await play_audio_from_url(ctx=ctx, bot=self.bot, url="https://www.youtube.com/watch?v=zzfA4QUIHVY")
         return
 
     @command(name="stop", help="Para o aúdio sendo tocado")

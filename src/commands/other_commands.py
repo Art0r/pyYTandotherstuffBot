@@ -10,7 +10,6 @@ class OtherCommands(Cog):
     @command(name='ping', help="responde a mensagem com pong")
     async def ping(self, ctx: Context, *args):
         if ctx.author != self.bot.user:
-            print(args)
             await ctx.reply('pong')
         return
 

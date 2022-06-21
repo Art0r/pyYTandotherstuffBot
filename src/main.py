@@ -25,7 +25,7 @@ async def on_command(ctx: Context):
     """)
     return
 
-
+# UNCOMMENT FOR PRODUCTION
 # @bot.event
 # async def on_command_error(ctx: Context, err: CommandError):
 #    await ctx.reply(err.args[0])
